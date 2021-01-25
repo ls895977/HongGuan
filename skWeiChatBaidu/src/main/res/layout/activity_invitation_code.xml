@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_F5F5F5"
+    android:paddingTop="30dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="邀请码"
+            android:textColor="@color/color_333333"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_back" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_code"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@+id/rl_title"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/shape_white_6"
+        android:hint="请输入邀请码"
+        android:lines="1"
+        android:paddingLeft="10dp"
+        android:textColor="@color/color_333333"
+        android:textColorHint="@color/color_999999"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_code"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:text="验证码错误,请重新输入"
+        android:textColor="@color/color_FB719A"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@+id/et_code"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/shape_fb719a_6"
+        android:text="下一步"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>

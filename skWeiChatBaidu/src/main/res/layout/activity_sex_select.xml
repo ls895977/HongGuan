@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="30dp">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_back" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/label_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_title"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="52dp"
+        android:text="选择你的性别"
+
+        android:textColor="#181818"
+        android:textSize="30sp" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_man"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:layout_below="@+id/label_a"
+        android:layout_marginTop="53dp"
+        >
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/man"
+            android:layout_width="300dp"
+            android:scaleType="fitXY"
+            android:layout_height="140dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            app:riv_oval="false"
+            app:riv_corner_radius="6dp"
+            android:src="@mipmap/yujian_nan"
+            />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/man_choose"
+            android:layout_width="305dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_stock"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="精英男性"
+            android:textSize="@dimen/sp_18_text_size"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_alignLeft="@+id/man"
+            android:layout_alignBottom="@id/man"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="25dp"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_nv"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:layout_marginTop="25dp"
+
+        android:layout_below="@+id/rl_man"
+
+        >
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_nv"
+            android:layout_width="300dp"
+            android:scaleType="fitXY"
+            android:layout_height="140dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            app:riv_oval="false"
+            app:riv_corner_radius="6dp"
+            android:src="@mipmap/yujian_nv"
+            />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/nv_choose"
+            android:layout_width="305dp"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_stock"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="魅力女性"
+            android:textSize="@dimen/sp_18_text_size"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_alignLeft="@+id/img_nv"
+            android:layout_alignBottom="@id/img_nv"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="25dp"
+            />
+
+    </RelativeLayout>
+
+
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+    android:layout_margin="50dp"
+        android:background="@drawable/shape_873f8b_3"
+        android:text="下一步"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+
+</RelativeLayout>

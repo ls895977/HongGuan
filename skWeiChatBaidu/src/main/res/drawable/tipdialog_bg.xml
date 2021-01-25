@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--设置渐变色-->
+    <gradient
+        android:angle="90"
+        />
+
+    <solid android:color="@null" />
+    <!--设置圆角-->
+    <corners
+        android:bottomLeftRadius="20px"
+        android:bottomRightRadius="20px"
+        android:topLeftRadius="20px"
+        android:topRightRadius="20px" />
+</shape>

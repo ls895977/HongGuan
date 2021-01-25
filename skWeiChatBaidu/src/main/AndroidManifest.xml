@@ -1,0 +1,1321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yujianni.app">
+
+    <!-- 极光权限 Required -->
+    <permission
+        android:name="${applicationId}.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Required  一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="${applicationId}.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!--华为角标-->
+    <uses-permission
+        android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /><!-- Android Q后台定位权限-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+
+
+    <application
+        android:name="com.sk.weichat.MyApplication"
+        android:allowBackup="true"
+        android:fitsSystemWindows="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@null"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:name, android:icon, android:roundIcon">
+        <activity
+            android:name="com.redchamber.message.CheckMeActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"></activity>
+        <activity
+            android:name="com.redchamber.photo.BarPhotoActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.mine.MinePrivateActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.message.UserEnrollActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.message.UserCommActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.message.DianzanActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.me.redpacket.SendRedPeasActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.friend.HeProgramOnLineActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.friend.HeMomentDetailsActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.face.FaceLivenessExpActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.bar.AppointmentComActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.map.MapAddressListActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.message.CommentsNotifyActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.message.MessageApplyActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.wallet.WalletDetailActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.wallet.RechargeActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.sk.weichat.pay.new_ui.PaymentOrReceiptActivity"
+            android:label="@string/title_activity_payment_new_ui"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.sk.weichat.ui.contacts.label.LabelActivityNewUI" />
+        <activity android:name="com.sk.weichat.ui.me.DescriptionActivity" />
+        <activity android:name="com.sk.weichat.ui.backup.ReceiveChatHistoryActivity" />
+        <activity android:name="com.sk.weichat.ui.circle.range.SelectCoverActivity" />
+        <activity android:name="com.sk.weichat.ui.search.SearchSingleTypeActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.search.SearchAllActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity android:name="com.sk.weichat.ui.other.LifeCircleSettingsActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.backup.SendChatHistoryActivity"
+            android:launchMode="singleInstance" />
+        <activity android:name="com.sk.weichat.ui.backup.SelectChatActivity" />
+        <activity android:name="com.sk.weichat.ui.backup.BackupHistoryActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.other.PrivacyAgreeActivity"
+            android:launchMode="singleTop" />
+        <activity android:name="com.sk.weichat.ui.login.AuthLoginActivity" />
+        <activity android:name="com.sk.weichat.ui.login.H5LoginActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.login.H5LoginProxyActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="${APP_ID}"
+                    android:path="/H5login"
+                    android:scheme="sk" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sk.weichat.ui.notification.NotificationProxyActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="${APP_ID}"
+                    android:path="/notification"
+                    android:scheme="sk" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sk.weichat.ui.me.PrivacyWhitelistActivity" />
+        <activity android:name="com.sk.weichat.ui.groupchat.FaceToFaceGroup" />
+        <activity android:name="com.sk.weichat.ui.groupchat.RoomSearchResultActivity" />
+        <activity android:name="com.sk.weichat.ui.groupchat.RoomSearchActivity" /> <!-- 启动页面 -->
+        <activity
+            android:name="com.sk.weichat.ui.SplashActivity"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTask"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sk.im.audio.VoiceRecordActivity" />
+        <activity android:name="com.sk.im.audio.VoiceRecordActivity2" /> <!-- Jitsi -->
+        <activity
+            android:name="com.sk.weichat.call.JitsiTalk"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.sk.weichat.call.Jitsi_connecting_second"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullSensor"
+            android:taskAffinity="android.task.meet"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.sk.weichat.call.Jitsi_pre"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="com.sk.weichat.call.JitsiIncomingcall"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="com.sk.weichat.call.JitsiInviteActivity"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity android:name="com.sk.weichat.course.CourseDateilsActivity" />
+        <activity android:name="com.sk.weichat.course.LocalCourseActivity" />
+        <activity android:name="com.sk.weichat.course.SelectFriendsActivity" />
+        <activity android:name="com.sk.weichat.course.SelectNewContactsActivity" />
+        <activity android:name="com.sk.weichat.course.SelectNewGroupActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.account.RegisterActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.sk.weichat.ui.account.RegisterUserBasicInfoActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.sk.weichat.ui.account.LoginActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.sk.weichat.ui.account.LoginHistoryActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.sk.weichat.ui.account.DataDownloadActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.account.SelectPrefixActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.sk.weichat.ui.account.AuthCodeActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.account.FindPwdActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.sk.weichat.ui.circle.range.AtSeeCircleActivity" />
+        <activity android:name="com.sk.weichat.ui.circle.range.NewZanActivity" />
+        <activity android:name="com.sk.weichat.ui.circle.range.SeeCircleActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.circle.range.SendShuoshuoActivity"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity
+            android:name="com.sk.weichat.ui.circle.range.SendAudioActivity"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity
+            android:name="com.sk.weichat.ui.circle.range.SendVideoActivity"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity
+            android:name="com.sk.weichat.ui.circle.range.SendFileActivity"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity android:name="com.sk.weichat.ui.circle.BusinessCircleActivity" />
+        <activity android:name="com.sk.weichat.ui.circle.LongTextShowActivity" />
+        <activity android:name="com.sk.weichat.ui.company.AddEmployee" />
+        <activity android:name="com.sk.weichat.ui.company.ChangeEmployeeDepartment" />
+        <activity android:name="com.sk.weichat.ui.company.CreateCompany" />
+        <activity android:name="com.sk.weichat.ui.company.CreateDepartment" />
+        <activity android:name="com.sk.weichat.ui.company.CreateGroup" />
+        <activity android:name="com.sk.weichat.ui.company.ManagerCompany" />
+        <activity android:name="com.sk.weichat.ui.company.ModifyCompanyName" />
+        <activity android:name="com.sk.weichat.ui.company.ModifyDepartmentName" />
+        <activity
+            android:name="com.sk.weichat.ui.contacts.label.CreateLabelActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.sk.weichat.ui.contacts.label.LabelActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.sk.weichat.ui.contacts.label.SelectLabelFriendActivity" />
+        <activity android:name="com.sk.weichat.ui.contacts.BlackActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.contacts.ContactInviteActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.sk.weichat.ui.contacts.ContactsActivity" />
+        <activity android:name="com.sk.weichat.ui.contacts.ContactsMsgInviteActivity" />
+        <activity android:name="com.sk.weichat.ui.contacts.DeviceActivity" />
+        <activity android:name="com.sk.weichat.ui.contacts.NewFriendActivity" />
+        <activity android:name="com.sk.weichat.ui.contacts.PublishNumberActivity" />
+        <activity android:name="com.sk.weichat.ui.contacts.RoomActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.contacts.SearchFriendActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity android:name="com.sk.weichat.ui.contacts.TalkHistoryActivity" />
+        <activity android:name="com.sk.weichat.ui.groupchat.SelectContactsActivity" /> <!-- 直播 -->
+        <activity android:name="com.sk.weichat.ui.live.CreateLiveActivity" />
+        <activity android:name="com.sk.weichat.ui.live.LiveActivity" /> <!-- 抖音 -->
+        <activity
+            android:name="com.sk.weichat.ui.trill.TrillActivity"
+            android:theme="@style/AppTheme_Sliding" />
+        <activity
+            android:name="com.sk.weichat.ui.trill.TriListActivity"
+            android:theme="@style/AppTheme_Sliding" />
+        <activity
+            android:name="com.sk.weichat.ui.xrce.RecordxActivity"
+            android:theme="@style/RecxTheme" />
+        <activity
+            android:name="com.sk.weichat.ui.xrce.PreviewxActivity"
+            android:theme="@style/RecxTheme" /> <!-- 发布短视频 -->
+        <activity
+            android:name="com.sk.weichat.ui.trill.ReleasexActivity"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" /> <!-- 短视频选择标签 -->
+        <activity
+            android:name="com.sk.weichat.ui.trill.TagPickerActivity"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity
+            android:name="com.sk.weichat.ui.live.LivePlayingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.live.PushFlowActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name="com.sk.weichat.ui.map.MapActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.map.MapPickerActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" /> <!-- 红包 -->
+        <activity android:name="com.sk.weichat.ui.me.redpacket.MucSendRedPacketActivity" />
+        <activity android:name="com.sk.weichat.ui.me.redpacket.MyConsumeRecordNew" />
+        <activity android:name="com.sk.weichat.ui.me.redpacket.QuXianActivity" />
+        <activity android:name="com.sk.weichat.ui.me.redpacket.RedDetailsActivity" />
+        <activity android:name="com.sk.weichat.ui.me.redpacket.RedListActivity" />
+        <activity android:name="com.sk.weichat.ui.me.redpacket.SendRedPacketActivity" />
+        <activity android:name="com.sk.weichat.ui.me.redpacket.WxPayAdd" />
+        <activity android:name="com.sk.weichat.ui.me.redpacket.WxPayBlance" />
+        <activity android:name="com.sk.weichat.ui.me.redpacket.scan.ScanRechargeActivity" />
+        <activity android:name="com.sk.weichat.ui.me.redpacket.scan.ScanWithdrawActivity" />
+        <activity android:name="com.sk.weichat.ui.me.redpacket.scan.ScanWithdrawListActivity" />
+        <activity android:name="com.sk.weichat.ui.me.redpacket.scan.ScanWithdrawAddActivity" />
+        <activity android:name="com.sk.weichat.ui.me.redpacket.scan.ScanWithdrawUpdateActivity" />
+        <activity android:name="com.sk.weichat.ui.me.sendgroupmessage.ChatActivityForSendGroup" /> <!-- 收付款、转账 -->
+        <activity
+            android:name="com.sk.weichat.pay.sk.SKPayActivity"
+            android:launchMode="singleTask" />
+        <activity android:name="com.sk.weichat.pay.TransferMoneyActivity" />
+        <activity android:name="com.sk.weichat.pay.TransferMoneyDetailActivity" />
+        <activity android:name="com.sk.weichat.pay.TransferRecordActivity" />
+        <activity android:name="com.sk.weichat.pay.PaymentActivity" />
+        <activity android:name="com.sk.weichat.pay.PaymentReceiptMoneyActivity" />
+        <activity android:name="com.sk.weichat.pay.ReceiptActivity" />
+        <activity android:name="com.sk.weichat.pay.ReceiptPayMoneyActivity" />
+        <activity android:name="com.sk.weichat.pay.ReceiptSetMoneyActivity" /> <!-- Me模块 -->
+        <activity android:name="com.sk.weichat.ui.me.AboutActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.me.BasicInfoEditActivity"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity android:name="com.sk.weichat.ui.me.FontSizeActivity" />
+        <activity android:name="com.sk.weichat.ui.me.LocalVideoActivity" />
+        <activity android:name="com.sk.weichat.ui.me.MyCollection" />
+        <activity android:name="com.sk.weichat.ui.me.NearPersonActivity" />
+        <activity android:name="com.sk.weichat.ui.me.PrivacySettingActivity" />
+        <activity android:name="com.sk.weichat.ui.me.BandAccountActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.me.SelectFriendsActivity"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity android:name="com.sk.weichat.ui.me.select.SelectLabelActivity" />
+        <activity android:name="com.sk.weichat.ui.me.SetAccountActivity" />
+        <activity android:name="com.sk.weichat.ui.me.SetConfigActivity" />
+        <activity android:name="com.sk.weichat.ui.me.SettingActivity" />
+        <activity android:name="com.sk.weichat.ui.me.SkinStore" />
+        <activity android:name="com.sk.weichat.ui.me.SwitchLanguage" /> <!-- 消息模块 -->
+        <activity
+            android:name="com.sk.weichat.ui.message.assistant.GroupAssistantAddKeywordActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.sk.weichat.ui.message.assistant.GroupAssistantDetailActivity" />
+        <activity android:name="com.sk.weichat.ui.message.assistant.SelectGroupAssistantActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.message.ChatActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name="com.sk.weichat.ui.message.ChatHistoryActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.message.ChatOverviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Sliding"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name="com.sk.weichat.ui.message.single.PersonSettingActivity" />
+        <activity android:name="com.sk.weichat.ui.message.single.SelectSetTypeActivity" />
+        <activity android:name="com.sk.weichat.ui.message.single.SetChatBackActivity" />
+        <activity android:name="com.sk.weichat.ui.message.single.SetLabelActivity" />
+        <activity android:name="com.sk.weichat.ui.message.single.SetRemarkActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.message.MucChatActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name="com.sk.weichat.ui.message.multi.AddContactsActivity" />
+        <activity android:name="com.sk.weichat.ui.message.multi.GroupManager" />
+        <activity
+            android:name="com.sk.weichat.ui.message.multi.GroupMoreFeaturesActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity android:name="com.sk.weichat.ui.message.multi.GroupTransferActivity" />
+        <activity android:name="com.sk.weichat.ui.message.multi.InviteVerifyActivity" />
+        <activity android:name="com.sk.weichat.ui.message.multi.NoticeListActivity" />
+        <activity android:name="com.sk.weichat.ui.message.multi.ProclamationActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.message.multi.RoomInfoActivity"
+            android:launchMode="singleTop" />
+        <activity android:name="com.sk.weichat.ui.message.multi.RoomReadListActivity" />
+        <activity android:name="com.sk.weichat.ui.message.multi.SetManagerActivity" />
+        <activity android:name="com.sk.weichat.ui.message.ManagerEmojiActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.message.MessageRemindActivity"
+            android:theme="@style/Anim_fade" />
+        <activity android:name="com.sk.weichat.ui.message.search.SearchChatHistoryActivity" />
+        <activity android:name="com.sk.weichat.ui.message.search.SearchDesignationContent" />
+        <activity android:name="com.sk.weichat.ui.message.search.SearchImageVideoContent" />
+        <activity
+            android:name="com.sk.weichat.ui.message.InstantMessageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name="com.sk.weichat.ui.message.QuickSendPreviewActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.message.SelectNewContactsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.message.SelectNewGroupInstantActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" /> <!-- 群文件 -->
+        <activity android:name="com.sk.weichat.ui.mucfile.AddMucFileActivity" />
+        <activity android:name="com.sk.weichat.ui.mucfile.MucFileDetails" />
+        <activity android:name="com.sk.weichat.ui.mucfile.MucFileListActivity" />
+        <activity android:name="com.sk.weichat.ui.mucfile.MucFilePreviewActivity" /> <!-- 附近模块 -->
+        <activity android:name="com.sk.weichat.ui.nearby.UserSearchActivity" />
+        <activity android:name="com.sk.weichat.ui.nearby.UserListActivity" />
+        <activity android:name="com.sk.weichat.ui.nearby.UserListGatherActivity" />
+        <activity android:name="com.sk.weichat.ui.other.BasicInfoActivity" />
+        <activity android:name="com.sk.weichat.ui.other.QRcodeActivity" /> <!-- 分享模块 -->
+        <activity
+            android:name="com.sk.weichat.ui.share.ShareLoginActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.sk.weichat.ui.share.AuthorizationActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.sk.weichat.ui.share.ShareNearChatFriend"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="${APP_ID}"
+                    android:path="/share"
+                    android:scheme="sk" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sk.weichat.ui.share.ShareLifeCircleActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.sk.weichat.ui.share.ShareNewFriend"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.sk.weichat.ui.share.ShareNewGroup"
+            android:launchMode="singleTop" /> <!-- Tool Activity -->
+        <activity
+            android:name="com.sk.weichat.ui.tool.MultiImagePreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Sliding"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.tool.SelectAreaActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.tool.SelectConstantActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.tool.SelectConstantSectionActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name="com.sk.weichat.ui.tool.SingleImagePreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_Sliding"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.sk.weichat.video.ChatVideoPreviewActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.tool.WebViewActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.MainActivity"
+            android:fitsSystemWindows="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            tools:ignore="LockedOrientationActivity" /> <!-- Android 8.0 报错 Only fullscreen opaque activities can request orientation -->
+        <activity
+            android:name="com.sk.weichat.ui.UserCheckedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMTheme.DialogStyle" />
+        <activity
+            android:name="com.sk.weichat.video.EasyCameraActivity"
+            android:screenOrientation="fullSensor" /> <!-- android:screenOrientation="portrait" 强制竖屏 -->
+        <!-- CameraWithFilterActivity -->
+        <activity
+            android:name="com.sk.weichat.luo.activity.CameraWithFilterActivity"
+            android:exported="true"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.sk.weichat.video.VideoRecorderActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/RecxTheme" />
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent${QQ_APP_ID}" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sk.weichat.ui.me.redpacket.ChangePayPasswordActivity"
+            android:windowSoftInputMode="stateAlwaysVisible" /> <!-- 图片多选框架 -->
+        <!--
+                <activity
+                    android:name="com.foamtrace.photopicker.PhotoPickerActivity"
+                    android:configChanges="orientation|screenSize"
+                    android:theme="@style/PhotoPickerTheme"/>
+                <activity
+                    android:name="com.foamtrace.photopicker.PhotoPreviewActivity"
+                    android:theme="@style/PhotoPickerTheme"/>
+        -->
+        <activity
+            android:name="com.sk.weichat.view.photopicker.PhotoPickerActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/PhotoPickerTheme" />
+        <activity
+            android:name="com.sk.weichat.view.photopicker.PhotoPreviewActivity"
+            android:theme="@style/PhotoPickerTheme" />
+<!--        <activity-->
+<!--            android:name="com.vivo.push.sdk.LinkProxyClientActivity"-->
+<!--            android:exported="false"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:theme="@android:style/Theme.Translucent.NoTitleBar"-->
+<!--            tools:ignore="LockedOrientationActivity" />-->
+<!--        <activity-->
+<!--            android:name="com.huawei.hms.activity.BridgeActivity"-->
+<!--            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"-->
+<!--            android:excludeFromRecents="true"-->
+<!--            android:exported="false"-->
+<!--            android:hardwareAccelerated="true"-->
+<!--            android:theme="@android:style/Theme.Translucent">-->
+<!--            <meta-data-->
+<!--                android:name="hwc-theme"-->
+<!--                android:value="androidhwext:style/Theme.Emui.Translucent" />-->
+<!--        </activity>-->
+        <activity
+            android:name="com.sk.weichat.ui.life.LifeCircleActivity"
+            android:screenOrientation="fullSensor" />
+        <activity android:name="com.sk.weichat.ui.nearby.PublicNumberSearchActivity" />
+        <activity android:name="com.sk.weichat.ui.nearby.PublicNumberListActivity" />
+        <activity android:name="com.sk.weichat.ui.circle.range.PraiseListActivity" />
+        <activity
+            android:name="com.sk.weichat.ui.systemshare.ShareNearChatFriend"
+            android:label="@string/send_to_friend">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="*/*" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sk.weichat.ui.systemshare.ShareNewFriend" />
+        <activity android:name="com.sk.weichat.ui.systemshare.ShareNewGroup" />
+        <activity
+            android:name="com.sk.weichat.ui.systemshare.ShareLifeCircleProxyActivity"
+            android:label="@string/send_to_life_circle">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="*/*" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sk.weichat.ui.systemshare.ShareShuoshuoActivity" />
+        <activity android:name="com.sk.weichat.ui.systemshare.ShareVideoActivity" /> <!-- 推送服务绑定进程 -->
+        <activity android:name="com.sk.weichat.ui.systemshare.ShareFileActivity" /> <!-- 注：此service必须在3.0.1版本以后（包括3.0.1版本）加入 -->
+        <activity android:name="com.sk.weichat.ui.account.QuickLoginAuthority">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- shikuimapp://www.shikuAndroid.com:80?apiKey= & appSecret = -->
+
+                <data
+                    android:host="www.shikuandroid.com"
+                    android:port="80"
+                    android:scheme="shikuimapp" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sk.weichat.ui.account.QuickPay">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- shikuimapp://www.shikuandroid.com:80/skPay?appId="+obj.appId+"&prepayId="+obj.prepayId+"&sign="+obj.signt = -->
+
+                <data
+                    android:host="www.shikuandroid.pay.com"
+                    android:port="80"
+                    android:scheme="shikuimapp" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sk.weichat.call.QuickMeetingActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- shikuimapp://meet.youjob.co/asdf -->
+
+                <data
+                    android:host="meet.youjob.co"
+                    android:scheme="shikuimapp" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sk.weichat.ui.lock.DeviceLockActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity android:name="com.sk.weichat.ui.me.SecureSettingActivity" /> <!-- 注：此service必须在2.2.5版本以后（包括2.2.5版本）加入 -->
+        <activity
+            android:name="com.sk.weichat.ui.lock.ChangeDeviceLockPasswordActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity android:name="com.sk.weichat.ui.contacts.SendContactsActivity" /> <!-- VIVO 推送 -->
+        <activity android:name="com.sk.weichat.ui.login.WebLoginActivity" />
+        <activity android:name="com.sk.weichat.ui.message.multi.RoomCopyActivity" /> <!-- push应用定义消息receiver声明 -->
+        <activity android:name="com.sk.weichat.ui.me.redpacket.PaymentCenterActivity" />
+        <activity android:name="com.sk.weichat.ui.me.select.SelectRoomActivity" />
+        <activity android:name="com.sk.weichat.ui.me.select.SelectColleagueActivity" /> <!-- OPPO 推送 -->
+        <activity android:name="com.sk.weichat.ui.me.redpacket.ResetPayPasswordActivity" /> <!-- 华为推送 -->
+        <activity
+            android:name="com.fanjun.keeplive.activity.OnePixelActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:theme="@style/onePixelActivity" /> <!-- 2.BridgeActivity定义了HMS-SDK中一些跳转所需要的透明页面 -->
+        <activity android:name="com.sk.weichat.view.imageedit.IMGEditActivity" /> <!-- 3.UpdateProvider用于HMS-SDK引导升级HMS，提供给系统安装器读取升级文件。 -->
+        <!-- 不同应用的authorities必须不同，所以用applicationId开头， -->
+        <activity android:name="com.sk.weichat.ui.yeepay.YeepayWallet" /> <!-- 4.用来接收PUSH消息的receiver： -->
+        <activity android:name="com.sk.weichat.ui.yeepay.YeepayWebViewActivity" /> <!-- 5. 接收通道发来的通知栏消息： -->
+        <activity android:name="com.sk.weichat.ui.yeepay.YeepayPaymentCenterActivity" />
+        <activity android:name="com.sk.weichat.ui.yeepay.YeepayRecharge" />
+        <activity android:name="com.sk.weichat.ui.yeepay.YeepayWithdraw" />
+        <activity android:name="com.sk.weichat.ui.yeepay.YeepayOpenActivity" />
+        <activity android:name="com.sk.weichat.ui.me.redpacket.MyWalletActivity" />
+        <activity android:name="com.sk.weichat.ui.yeepay.YeepayRecordActivity" /> <!-- 魅族推送， -->
+        <!-- 绑定进程保活 -->
+        <activity
+            android:name="com.redchamber.login.LoginRegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.login.AccountLoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.login.ResetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.login.PhoneRegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.login.SexSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.login.InvitationCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.info.ImprovePersonalInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.info.ResidentCityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.info.JobSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.home.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.search.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.friend.FriendHomePageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.report.AnonymousReportActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.invite.MyInviteCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.like.BlackListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.like.MyLikeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.setting.SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.setting.PrivacySettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.setting.ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.setting.BindPhoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.auth.AuthenticationCenterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.auth.AuthenticationRealActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.auth.AuthenticationGirlActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.auth.BuyBadgeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.wallet.WalletActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.wallet.WithdrawalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.vip.VipCenterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.release.ReleaseProgramActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.release.ReleaseMomentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.release.SelectProgramAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.radio.MyRadioActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.radio.MomentDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.radio.ProgramDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.radio.CommentDetailListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.radio.ThumbDetailListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.photo.MyAlbumActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.photo.PreviewPhotosActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" /> <!-- 遇见 -->
+        <activity
+            android:name="com.redchamber.photo.RedAlbumActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.photo.FriendAlbumActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.photo.PreviewFriendPhotosActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.redchamber.web.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name="com.redchamber.login.NewAAActivity" />
+
+
+
+        <!-- 极光推送  若您的业务中有使用极光富媒体功能，或者极光早上好功能，需要把此 Activity 的 exported 修改成 true 覆盖 jcenter 上的组件。 -->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:exported="true"
+            tools:node="replace"
+            android:theme="@style/MyDialogStyle">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="cn.jpush.android.ui.PopWinActivity" />
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </activity>
+
+
+
+        <!-- Required SDK 核心功能-->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- since 3.0.9 Required SDK 核心功能-->
+        <provider
+            android:authorities="${applicationId}.DataProvider"
+            android:name="cn.jpush.android.service.DataProvider"
+            android:process=":pushcore"
+            android:exported="false"
+            />
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，或把 enabled 设置成 false ；App 不会被其他 App 拉起，但会拉起其他的 App。 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+                <category android:name="${applicationId}" />
+            </intent-filter>
+
+        </service>
+
+        <!-- 可选，如果使用静态Activity方式拉起，该组件必须声明 -->
+        <activity android:name="cn.jpush.android.service.DActivity"
+            android:enabled="true"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:taskAffinity="jpush.custom">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DActivity"/>
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- since 3.1.0 Required SDK 核心功能-->
+        <provider
+            android:authorities="${applicationId}.DownloadProvider"
+            android:name="cn.jpush.android.service.DownloadProvider"
+            android:exported="true"
+            />
+
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />   <!--Required  显示通知栏 -->
+                <category android:name="${applicationId}" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能-->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" android:exported="false"/>
+
+        <!-- 3.5.0新增，用于定时展示功能 -->
+        <receiver android:name="cn.jpush.android.service.SchedulerReceiver" android:exported="false"/>
+
+        <!-- 3.6.7 新增，用于负反馈组件 -->
+        <service android:name="cn.jpush.android.service.MessagingIntentService" />
+        <!-- 极光推送，需要把此 Activity 的 exported 修改成 true 覆盖 jcenter 上的组件。 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            tools:node="replace"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="${BAIDU_API_KEY}" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${GOOGLE_API_KEY}" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+<!--        <meta-data-->
+<!--            android:name="com.vivo.push.api_key"-->
+<!--            android:value="${VIVO_APP_KEY}" />-->
+<!--        <meta-data-->
+<!--            android:name="com.vivo.push.app_id"-->
+<!--            android:value="${VIVO_APP_ID}" />-->
+<!--        <meta-data-->
+<!--            android:name="com.huawei.hms.client.appid"-->
+<!--            android:value="${HUAWEI_APP_ID}" />-->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/icon_notification" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${APP_ID}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+<!--        <provider-->
+<!--            android:name="com.huawei.hms.update.provider.UpdateProvider"-->
+<!--            android:authorities="${APP_ID}.hms.update.provider"-->
+<!--            android:exported="false"-->
+<!--            android:grantUriPermissions="true" />-->
+
+        <receiver
+            android:name="com.sk.weichat.broadcast.MyBroadcastReceiver"
+            android:process=":restart">
+            <intent-filter>
+                <action android:name="${APP_ID}.action.broadcasttest.startActivity" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.sk.weichat.broadcast.ShakeReceiver">
+            <intent-filter>
+                <action android:name="${APP_ID}.action.shake_msg_notify" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.PingReceiver"
+            android:exported="false"
+            android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER" />
+            </intent-filter>
+        </receiver>
+<!--        <receiver-->
+<!--            android:name="com.sk.weichat.xmpp.helloDemon.MiMessageReceiver"-->
+<!--            android:exported="true">-->
+
+<!--            &lt;!&ndash; 这里com.xiaomi.mipushdemo.DemoMessageRreceiver改成app中定义的完整类名 &ndash;&gt;-->
+<!--            <intent-filter>-->
+<!--                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />-->
+<!--            </intent-filter>-->
+<!--            <intent-filter>-->
+<!--                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />-->
+<!--            </intent-filter>-->
+<!--            <intent-filter>-->
+<!--                <action android:name="com.xiaomi.mipush.ERROR" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+<!--        <receiver android:name="com.sk.weichat.xmpp.helloDemon.VivoPushMessageReceiver">-->
+<!--            <intent-filter>-->
+
+<!--                &lt;!&ndash; 接收push消息 &ndash;&gt;-->
+<!--                <action android:name="com.vivo.pushclient.action.RECEIVE" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+<!--        <receiver android:name="com.sk.weichat.xmpp.helloDemon.HuaweiPushRevicer">-->
+<!--            <intent-filter>-->
+
+<!--                &lt;!&ndash; 必须,用于接收TOKEN &ndash;&gt;-->
+<!--                <action android:name="com.huawei.android.push.intent.REGISTRATION" />-->
+<!--                &lt;!&ndash; 必须，用于接收消息 &ndash;&gt;-->
+<!--                <action android:name="com.huawei.android.push.intent.RECEIVE" />-->
+<!--                &lt;!&ndash; 可选，用于点击通知栏或通知栏上的按钮后触发onEvent回调 &ndash;&gt;-->
+<!--                <action android:name="com.huawei.android.push.intent.CLICK" />-->
+<!--                &lt;!&ndash; 可选，查看PUSH通道是否连接，不查看则不需要 &ndash;&gt;-->
+<!--                <action android:name="com.huawei.intent.action.PUSH_STATE" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+<!--        <receiver android:name="com.huawei.hms.support.api.push.PushEventReceiver">-->
+<!--            <intent-filter>-->
+
+<!--                &lt;!&ndash; 接收通道发来的通知栏消息，兼容老版本PUSH &ndash;&gt;-->
+<!--                <action android:name="com.huawei.intent.action.PUSH" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+<!--        <receiver-->
+<!--            android:name="com.sk.weichat.xmpp.helloDemon.MeizuPushMsgReceiver"-->
+<!--            tools:ignore="ExportedReceiver">-->
+<!--            <intent-filter>-->
+
+<!--                &lt;!&ndash; 接收push消息 &ndash;&gt;-->
+<!--                <action android:name="com.meizu.flyme.push.intent.MESSAGE" />-->
+<!--                &lt;!&ndash; 接收register消息 &ndash;&gt;-->
+<!--                <action android:name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK" />-->
+<!--                &lt;!&ndash; 接收unregister消息 &ndash;&gt;-->
+<!--                <action android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK" />-->
+<!--                <action android:name="com.meizu.c2dm.intent.REGISTRATION" />-->
+<!--                <action android:name="com.meizu.c2dm.intent.RECEIVE" />-->
+
+<!--                <category android:name="${APP_ID}" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+        <receiver android:name="com.fanjun.keeplive.receiver.NotificationClickReceiver" />
+
+        <!-- 极光推送       -->
+        <receiver
+            android:name="com.fanjun.keeplive.receiver.PushMessageReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+                <category android:name="${APP_ID}" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 个推服务-->
+
+        <service
+            android:name="com.fanjun.keeplive.getui.DemoIntentService"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service
+            android:name="com.fanjun.keeplive.getui.GetuiPushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice"/>
+
+        <service
+            android:name="com.sk.weichat.xmpp.CoreService"
+            android:enabled="true"
+            android:exported="true" />
+        <service android:name="com.sk.weichat.call.JitsiFloatService" />
+        <service android:name="com.sk.weichat.call.RecordService" />
+        <service android:name="com.sk.weichat.view.window.WindowShowService" />
+        <service android:name="com.sk.weichat.RestartService" />
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+<!--        <service-->
+<!--            android:name="com.xiaomi.push.service.XMPushService"-->
+<!--            android:enabled="true"-->
+<!--            android:exported="false"-->
+<!--            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"-->
+<!--            android:process=":pushservice">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.service.notification.NotificationListenerService" />-->
+<!--            </intent-filter>-->
+<!--        </service>-->
+<!--        <service-->
+<!--            android:name="com.xiaomi.push.service.XMJobService"-->
+<!--            android:enabled="true"-->
+<!--            android:exported="false"-->
+<!--            android:permission="android.permission.BIND_JOB_SERVICE"-->
+<!--            android:process=":pushservice" />-->
+<!--        <service-->
+<!--            android:name="com.xiaomi.mipush.sdk.PushMessageHandler"-->
+<!--            android:enabled="true"-->
+<!--            android:exported="true" />-->
+<!--        <service-->
+<!--            android:name="com.xiaomi.mipush.sdk.MessageHandleService"-->
+<!--            android:enabled="true" />-->
+        <service android:name="com.sk.weichat.xmpp.helloDemon.FirebaseMessageService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+<!--        <service-->
+<!--            android:name="com.vivo.push.sdk.service.CommandClientService"-->
+<!--            android:exported="true" />-->
+<!--        <service-->
+<!--            android:name="com.sk.weichat.xmpp.helloDemon.OppoPushMessageService"-->
+<!--            android:permission="com.coloros.mcs.permission.SEND_MCS_MESSAGE">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="com.coloros.mcs.action.RECEIVE_MCS_MESSAGE" />-->
+<!--            </intent-filter>-->
+<!--        </service>-->
+<!--        <service-->
+<!--            android:name="com.sk.weichat.xmpp.helloDemon.MeizuForegroundService"-->
+<!--            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.service.notification.NotificationListenerService" />-->
+<!--            </intent-filter>-->
+<!--        </service>-->
+        <service android:name="com.fanjun.keeplive.service.LocalService" />
+        <service android:name="com.fanjun.keeplive.service.HideForegroundService" />
+        <service
+            android:name="com.fanjun.keeplive.service.JobHandlerService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.fanjun.keeplive.service.RemoteService"
+            android:process=":remote" />
+        <!--   极光集成     -->
+        <service android:name="com.fanjun.keeplive.service.PushService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+    <permission
+        android:name="${APP_ID}.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature" />
+    <permission
+        android:name="${APP_ID}.push.permission.MESSAGE"
+        android:protectionLevel="signature" />
+
+    <permission
+        android:name="${APP_ID}.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-feature android:name="android.hardware.microphone" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" /> <!-- 这个权限必须是applicationId开头， -->
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" /> <!-- 魅族推送， -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RAISED_THREAD_PRIORITY" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- OPPO 推送 -->
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="${APP_ID}.permission.MIPUSH_RECEIVE" />
+    <uses-permission android:name="com.meizu.flyme.push.permission.RECEIVE" />
+    <uses-permission android:name="${APP_ID}.push.permission.MESSAGE" />
+    <uses-permission android:name="com.meizu.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="${APP_ID}.permission.C2D_MESSAGE" />
+
+    <uses-permission android:name="com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE" />
+
+    <!-- iBeancon 个推功能所需权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <!-- 个推电子围栏功能所需权限 -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- 个推SDK权限配置开始 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+
+</manifest>
